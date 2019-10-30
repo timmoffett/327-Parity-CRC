@@ -13,10 +13,11 @@ def crc_check(input_bitstring, polynomial_bitstring, check_value):
     return ('1' not in ''.join(input_padded_array)[len_input:])
 
 def main():
-    bitstring   = int(input("Bitstring: "), 2)
-    divisor     = int(input("Divisor Bitstring: "), 2)
-    remainder   = int(input("Remainder Bitstring: "), 2)
-    crc_check(bitstring, divisor, remainder)
+    bitstring   = input("Bitstring: ")
+    divisor     = input("Divisor Bitstring: ")
+    remainder   = input("Remainder Bitstring: ")
+    check       = crc_check(bitstring, divisor, remainder)
+    print(check)
 
 if __name__ == '__main__':
     main()
