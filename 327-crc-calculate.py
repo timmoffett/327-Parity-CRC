@@ -14,11 +14,11 @@ def crc_remainder(input_bitstring, polynomial_bitstring, initial_filler):
     return ''.join(input_padded_array)[len_input:]
 
 def main():
-    bitstring   = int(input("Bitstring: "), 2)
-    divisor     = int(input("Divisor Bitstring: "), 2)
-    filler   = int(input("Remainder Bitstring: "), 2)
-    remainder = crc_remainder(bitstring, divisor, filler)
-    print(bin(remainder))
+    bitstring   = input("Bitstring: ")
+    divisor     = input("Divisor Bitstring: ")
+    filler      = input("Remainder Bitstring: ")
+    remainder   = crc_remainder(bitstring, divisor, filler)
+    print(remainder)
     input()
 
 if __name__ == '__main__':
